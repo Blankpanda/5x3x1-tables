@@ -1,0 +1,21 @@
+label{
+display:inline-block;
+width: 150px;
+margin-right:30px;
+padding-bottom:5px;
+text-align:right;
+}
+
+input{
+
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#lift-inputs{
+border:none;
+overflow:auto;
+margin:0px auto;
+}
