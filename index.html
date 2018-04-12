@@ -3,166 +3,193 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-     <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   </head>
   <body>
-    <h1> Enter 1RM for each lift</h1>
-    <div id="lift-inputs">
-      <label for="OHP-1RM-textbox">Overhead Press:</label>
-      <input type="textbox" id="OHP-1RM-textbox" value="" />
-      <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1> Enter 1RM for each lift</h1>
+          <div id="lift-inputs">
+            <label for="OHP-1RM-textbox">Overhead Press:</label>
+            <input type="textbox" id="OHP-1RM-textbox" value="" />
+            <br>
+          
+            <label for="BENCH-1RM-textbox">Bench Press:</label>
+            <input type="textbox" id="BENCH-1RM-textbox" value="">
+            <br>
+          
+            <label for="SQUAT-1RM-textbox">Squat:</label>
+            <input type="textbox" id="SQUAT-1RM-textbox" value="" />
+            <br>
+          
+            <label for="DEADLIFT-1RM-textbox">Deadlift:</label>
+            <input type="textbox" id="DEADLIFT-1RM-textbox" value="">
+            <br>
+            <button onclick="fillTables()">Generate Plan</button>
+          </div>       
+        </div>
+        <div class="col-lg-6">
+          <image style="width:80%;height=80%"src="images/boar.jpg">
+        </div>
+      </div>
       
-      <label for="BENCH-1RM-textbox">Bench Press:</label>
-      <input type="textbox" id="BENCH-1RM-textbox" value="">
-      <br>
-      
-      <label for="SQUAT-1RM-textbox">Squat:</label>
-      <input type="textbox" id="SQUAT-1RM-textbox" value="" />
-      <br>
-      
-      <label for="DEADLIFT-1RM-textbox">Deadlift:</label>
-      <input type="textbox" id="DEADLIFT-1RM-textbox" value="">
-      <br>
-      <button onclick="fillTables()">Generate Plan</button>
-</form>
-</div>
-<br>
-<div style="display:none" id="week-tables">
-  <h1> Week 1 </h1>
-  <table style="width:100%">
-    <tr>
-      <th>Day</th>
-      <th>Lift</th> 
-      <th>Phase</th>
-    </tr>
+    </div>
     
-    <tr>
-      <td>1</td>
-      <td>Squat</td> 
-      <td>1</td>
-    </tr>
-
-    <tr>
-      <td>2</td>
-      <td>Bench</td> 
-      <td>1</td>
-    </tr>
-
-    <tr>
-      <td>3</td>
-      <td>Deadlift</td> 
-      <td>1</td>
-    </tr>
-
-    <tr>
-      <td>4</td>
-      <td>Overhead Press</td> 
-      <td>1</td>
-    </tr>
+    <br>
     
-  </table>
+<div class="container" style="display:none" id="week-tables">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1> Week 1 </h1>
+      <table style="width:100%">
+        <tr>
+          <th>Day</th>
+          <th>Lift</th> 
+          <th>Phase</th>
+        </tr>
+        
+        <tr>
+          <td>1</td>
+          <td>Squat</td> 
+          <td>1</td>
+        </tr>
 
-    <h1> Week 2 </h1>
-  <table style="width:100%">
-    <tr>
-      <th>Day</th>
-      <th>Lift</th> 
-      <th>Phase</th>
-    </tr>
-    
-    <tr>
-      <td>1</td>
-      <td>Squat</td> 
-      <td>2</td>
-    </tr>
+        <tr>
+          <td>2</td>
+          <td>Bench</td> 
+          <td>1</td>
+        </tr>
 
-    <tr>
-      <td>2</td>
-      <td>Bench</td> 
-      <td>2</td>
-    </tr>
+        <tr>
+          <td>3</td>
+          <td>Deadlift</td> 
+          <td>1</td>
+        </tr>
 
-    <tr>
-      <td>3</td>
-      <td>Deadlift</td> 
-      <td>2</td>
-    </tr>
+        <tr>
+          <td>4</td>
+          <td>Overhead Press</td> 
+          <td>1</td>
+        </tr>
+        
+      </table>
+    </div>
 
-    <tr>
-      <td>4</td>
-      <td>Overhead Press</td> 
-      <td>2</td>
-    </tr>
-    
-  </table>
+    <div class="col-lg-6">
+      <h1> Week 2 </h1>
+      <table style="width:100%">
+        <tr>
+          <th>Day</th>
+          <th>Lift</th> 
+          <th>Phase</th>
+        </tr>
+        
+        <tr>
+          <td>1</td>
+          <td>Squat</td> 
+          <td>2</td>
+        </tr>
 
-    <h1> Week 3 </h1>
-  <table style="width:100%">
-    <tr>
-      <th>Day</th>
-      <th>Lift</th> 
-      <th>Phase</th>
-    </tr>
-    
-    <tr>
-      <td>1</td>
-      <td>Squat</td> 
-      <td>3</td>
-    </tr>
+        <tr>
+          <td>2</td>
+          <td>Bench</td> 
+          <td>2</td>
+        </tr>
 
-    <tr>
-      <td>2</td>
-      <td>Bench</td> 
-      <td>3</td>
-    </tr>
+        <tr>
+          <td>3</td>
+          <td>Deadlift</td> 
+          <td>2</td>
+        </tr>
 
-    <tr>
-      <td>3</td>
-      <td>Deadlift</td> 
-      <td>3</td>
-    </tr>
+        <tr>
+          <td>4</td>
+          <td>Overhead Press</td> 
+          <td>2</td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
 
-    <tr>
-      <td>4</td>
-      <td>Overhead Press</td> 
-      <td>3</td>
-    </tr>
-    
-  </table>
+  <div class="row">
+    <div class="col-lg-6">
+      <h1> Week 3 </h1>
+      <table style="width:100%">
+        <tr>
+          <th>Day</th>
+          <th>Lift</th> 
+          <th>Phase</th>
+        </tr>
+        
+        <tr>
+          <td>1</td>
+          <td>Squat</td> 
+          <td>3</td>
+        </tr>
 
-    <h1> Week 4 </h1>
-  <table style="width:100%">
-    <tr>
-      <th>Day</th>
-      <th>Lift</th> 
-      <th>Phase</th>
-    </tr>
-    
-    <tr>
-      <td>1</td>
-      <td>Squat</td> 
-      <td>4</td>
-    </tr>
+        <tr>
+          <td>2</td>
+          <td>Bench</td> 
+          <td>3</td>
+        </tr>
 
-    <tr>
-      <td>2</td>
-      <td>Bench</td> 
-      <td>4</td>
-    </tr>
+        <tr>
+          <td>3</td>
+          <td>Deadlift</td> 
+          <td>3</td>
+        </tr>
 
-    <tr>
-      <td>3</td>
-      <td>Deadlift</td> 
-      <td>4</td>
-    </tr>
+        <tr>
+          <td>4</td>
+          <td>Overhead Press</td> 
+          <td>3</td>
+        </tr>
+        
+      </table>
+    </div>
 
-    <tr>
-      <td>4</td>
-      <td>Overhead Press</td> 
-      <td>4</td>
-    </tr>
-    
-  </table>
+    <div class="col-lg-6">
+      <h1> Week 4 </h1>
+      <table style="width:100%">
+        <tr>
+          <th>Day</th>
+          <th>Lift</th> 
+          <th>Phase</th>
+        </tr>
+        
+        <tr>
+          <td>1</td>
+          <td>Squat</td> 
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Bench</td> 
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Deadlift</td> 
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Overhead Press</td> 
+          <td>4</td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+
+
 </div>
 
 <div id="lift-phases">

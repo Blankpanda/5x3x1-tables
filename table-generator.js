@@ -7,12 +7,16 @@ function fillTables() {
 
     if (validateTextboxes(deadliftOneRm,ohpOneRm,benchOneRm,squatOneRm)) {
         showWeekTables();
-        generatePhases(deadliftOnerm,ohpOneRm,benchOneRm,squatOneRm);
+        generatePhases(deadliftOneRm,ohpOneRm,benchOneRm,squatOneRm);
     }
 }
 
 function generatePhases() {
-    
+    var tableTemplate = "<table><tr><td>Set</td><td>90% of 1RM</td><td>Reps</td>";
+    var liftsDiv = document.getElementById("lift-phases")
+    for(var i = 0; i < 4; i++) { // 4 phases
+        liftsDiv.write(tableTemplate);
+    }
 }
 function showWeekTables() {
     document.getElementById("week-tables").style.display ="block";
